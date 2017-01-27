@@ -10,5 +10,23 @@ handlers:
   static_files: static/favicon.ico
   upload: static/favicon.ico
 
+- url: /(.*\.css)
+  mime_type: text/css
+  static_files: static/\1
+  upload: static/(.*\.css)
+  expiration: 7d
+
+- url: /(.*\.png)
+  mime_type: image/png
+  static_files: static/\1
+  upload: static/(.*\.png)
+  expiration: 7d
+
+- url: /(.*\.js)
+  mime_type: text/javascript
+  static_files: static/\1
+  upload: static/(.*\.js)
+  expiration: 7d
+
 - url: /.*
   script: _go_app

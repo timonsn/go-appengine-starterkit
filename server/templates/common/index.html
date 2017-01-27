@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{.Title}}</title>
+
+    <!-- Marx CSS -->
+    <link rel="stylesheet" href="css/marx.min.css">
+</head>
+
+<body>
+<main>
+    <article>
+        <h1>{{.Title}}</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vehicula nulla sed justo sagittis blandit.
+            Duis at diam quis neque tincidunt tincidunt. Suspendisse sodales, nisl sed efficitur suscipit,
+            diam erat fermentum nunc, nec lobortis erat tortor ac quam.
+        </p>
+        <h2>Form</h2>
+        <form method="post">
+            <fieldset>
+                <label for="text">Text:</label>
+                <input type="text" name="text" id="text" tab-index="1" placeholder="text">
+            </fieldset>
+
+            <fieldset>
+                <label for="textarea">Text Area:</label>
+                <textarea rows="4" cols="27" id="textarea" placeholder="textarea"></textarea>
+            </fieldset>
+
+            <input type="submit" value="Submit">
+        </form>
+    </article>
+    <footer>
+        <p>Footer</p>
+    </footer>
+</main>
+
+</body>
+</html>
