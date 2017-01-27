@@ -1,6 +1,14 @@
 language: go
-
 go:
-  - 1.x
-
-
+- 1.x
+deploy:
+  provider: gae
+  keyfile: project-service-account.json
+  project: YOUR-PROJECT-GAE-PROJECT-ID
+env:
+  global:
+    secure: omiU3FBYCKZXWQeCoLkKiHLAti5ygW++N8rqQxmp3YPyaBhVhLbKMEKBjpNoXYD0VSSMN/CXWVafld1q+k8zCbgVpUsTrrSUHP8j2S9w2xRTfytx/h2Slsum0IDP+nknDXvo5iblbVSJn6TuTyJbrha+U88pSMqUzfy0HtJuai37U05KtfEkz5O2qcrwkghODNvSQ4KNEGDQoex6z++yVxJUapa4mXs+s2MbrfpUGY8uFumASQQjpiwkOs6V1r1Hkb8w9SFpeC2rsxcuWW4Gy6/yHQbeS0HJ8y5McR9SAFSeWewJclvsLfyv5m9uwGmVPV2Be+MTE3oebz2zjljC9eOmRlkIMpsUqunYLoNnYYK33G2Y0FkOjmlFFAEiG8Sn7BZcqhwcL3exVy/1qFBkO1tXBD7ioBRgWhmIvG5xdOgs2BV4sw5oP1im4HO9K3i7jAMjBEFqSvdU1UKmTmMVbh2kubxu9ojc4kj6dWCoG5Ff2dgyFKn+RiCk5reKWG4dnY3jvTzDC0p3d/AKvh4at8fF6ihPxISSfhfWXtCwOl5KpaGDlYMj0xpm0uQE1hDrwHbqf+VCh+5jEc1YTpykHOWXyRCYjFwmYsPUbv2BgKLReeOmFvJ8qh5qq4wDg9mC0JXG36dQsF13zjvPUHXoKC/qzDM19Xl6qSnzMDy7vQQ=
+before_install:
+- openssl aes-256-cbc -K $encrypted_7945307015f6_key -iv $encrypted_7945307015f6_iv
+  -in project-service-account.json.enc -out project-service-account.json
+  -d
