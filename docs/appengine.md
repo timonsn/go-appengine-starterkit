@@ -1,4 +1,4 @@
-#App Engine YAML configuration
+#App Engine app.yaml configuration
 
 ## Runtime
 `runtime` is one of the required keys for VM hosting environment setup. For standard runtimes, use values `python27`, `go`, `java`, `php55`. For custom runtimes, use value `custom`.
@@ -24,3 +24,7 @@ The `runtime`, `vm`, `api_version` keys are required to setup the VM hosting env
 `cool_down_period_sec` is the time interval in seconds between auto scaling checks. The cool-down period must be greater than or equal to 60 seconds.
 
 `target_utilization` is used by the autoscaling service to decide when to reduce or increase the number of VM instances based on the average CPU utilization across all running VM instances.
+
+## app.yaml Reference
+For a complete reference see also:
+https://cloud.google.com/appengine/docs/go/config/appref
