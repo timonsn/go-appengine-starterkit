@@ -1,9 +1,9 @@
 package main
 
-import "net/http"
 import (
 	"encoding/json"
 	"html/template"
+	"net/http"
 )
 
 const (
